@@ -76,6 +76,7 @@ public class Alumnos extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         txtApellidoAcu = new javax.swing.JTextField();
+        ckMatriculado = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Alumnos");
@@ -206,13 +207,15 @@ public class Alumnos extends javax.swing.JFrame {
             }
         });
 
+        ckMatriculado.setText("Matriculado");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,7 +229,10 @@ public class Alumnos extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txtApellidos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
                                     .addComponent(txtNombres, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
@@ -257,23 +263,23 @@ public class Alumnos extends javax.swing.JFrame {
                                 .addComponent(btnModificar)
                                 .addGap(29, 29, 29)
                                 .addComponent(btnEliminar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                                 .addComponent(btnLimpiar))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(rbMasculinoA)
                                         .addGap(18, 18, 18)
-                                        .addComponent(rbFemeninoA))
+                                        .addComponent(rbFemeninoA)
+                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(rbMasculinoAcu)
                                         .addGap(27, 27, 27)
-                                        .addComponent(rbFemeninoAcu)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(txtApellidoAcu))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                                        .addComponent(rbFemeninoAcu)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(ckMatriculado)))
+                                .addContainerGap())
+                            .addComponent(txtApellidoAcu)))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,7 +346,8 @@ public class Alumnos extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(rbMasculinoAcu)
-                    .addComponent(rbFemeninoAcu))
+                    .addComponent(rbFemeninoAcu)
+                    .addComponent(ckMatriculado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -367,7 +374,7 @@ public class Alumnos extends javax.swing.JFrame {
                         .addComponent(labelalumno)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 923, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
@@ -420,7 +427,8 @@ public class Alumnos extends javax.swing.JFrame {
       String TipodeIdentificacion= txtTipoDoc.getText();
       String Direccion= txtDireccion.getText();
       String Tipodesangre= txtTipodesangre.getText();
-      String Tipodeeps= txtEps.getText();
+      String Eps= txtEps.getText();
+  
       String Sexo;
       if(rbMasculinoA.isSelected()==true){
           Sexo ="M";
@@ -433,7 +441,7 @@ public class Alumnos extends javax.swing.JFrame {
       String Fechadenacimiento= txtFechadenacimiento.getText();
       String NombreAcudiente= txtNombre_Acudiente.getText();
       String ApellidoAcudiente= txtApellidoAcu.getText();
-       String SexoAcu = null;
+       String SexoAcudiente = "M";
       if(rbMasculinoAcu.isSelected()==true){
           Sexo ="M";
       }else if(rbFemeninoAcu.isSelected()==true){
@@ -442,23 +450,25 @@ public class Alumnos extends javax.swing.JFrame {
           Sexo="M";
       }
       String Telefono = txtTelefono.getText();
+      Boolean Matriculado = ckMatriculado.isSelected();
       try{
       Connection con = Conexion.getConexion();
-      PreparedStatement ps = con.prepareStatement("INSERT INTO Alumnos (Nombres,Apellidos,Documento,TipodeIdentificacion,Direccion,Tipodesangre,Tipodeeps,Sexo,Curso,Fechadenacimiento,NombreAcudiente,ApellidoAcudiente,SexoAcu,Telefono) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?");
+      PreparedStatement ps = con.prepareStatement("INSERT INTO Alumnos (Nombres,Apellidos,Documento,Tipo_identificacion,Direccion,Tipo_sangre,Eps,Sexo,curso,Fecha_nacimiento,Nombre_acudiente,Apellido_acudiente,Sexo_acudiente,Telefono,Matriculado) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
       ps.setString(1, Nombres);
       ps.setString(2, Apellidos);
       ps.setString(3, Documento);
       ps.setString(4, TipodeIdentificacion);
       ps.setString(5, Direccion);
       ps.setString(6, Tipodesangre);
-      ps.setString(7, Tipodeeps);
+      ps.setString(7, Eps);
       ps.setString(8, Sexo);
       ps.setString(9, Curso);
       ps.setString(10, Fechadenacimiento);
       ps.setString(11, NombreAcudiente);
       ps.setString(12, ApellidoAcudiente);
-      ps.setString(13, SexoAcu);
+      ps.setString(13, SexoAcudiente);
       ps.setString(14, Telefono);
+      ps.setBoolean(15, Matriculado);
       ps.executeUpdate();
       JOptionPane.showMessageDialog(null,"Alumno Guardado");
       } catch (SQLException e) {
@@ -515,6 +525,7 @@ public class Alumnos extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnguardar;
+    private javax.swing.JCheckBox ckMatriculado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
