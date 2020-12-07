@@ -18,14 +18,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author kristian--
  */
-public class Comite extends javax.swing.JFrame {
+public class Rectores extends javax.swing.JFrame {
 
     /**
-     * Creates new form Comite
+     * Creates new form Rectores
      */
-    public Comite() {
+    public Rectores() {
         initComponents();
         CargarTabla();
+        
     }
 
     /**
@@ -37,7 +38,7 @@ public class Comite extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        paneCoordinador = new javax.swing.JPanel();
+        paneRector = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -62,11 +63,11 @@ public class Comite extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         ckMatriculado = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblCoordinadores = new javax.swing.JTable();
+        tblRectores = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        paneCoordinador.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12))); // NOI18N
+        paneRector.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12))); // NOI18N
 
         jLabel2.setText("Nombres:");
 
@@ -147,35 +148,35 @@ public class Comite extends javax.swing.JFrame {
 
         ckMatriculado.setText("Activo");
 
-        javax.swing.GroupLayout paneCoordinadorLayout = new javax.swing.GroupLayout(paneCoordinador);
-        paneCoordinador.setLayout(paneCoordinadorLayout);
-        paneCoordinadorLayout.setHorizontalGroup(
-            paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paneCoordinadorLayout.createSequentialGroup()
+        javax.swing.GroupLayout paneRectorLayout = new javax.swing.GroupLayout(paneRector);
+        paneRector.setLayout(paneRectorLayout);
+        paneRectorLayout.setHorizontalGroup(
+            paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneRectorLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(paneCoordinadorLayout.createSequentialGroup()
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneRectorLayout.createSequentialGroup()
                         .addComponent(ckMatriculado)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(paneCoordinadorLayout.createSequentialGroup()
-                        .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneRectorLayout.createSequentialGroup()
+                        .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                             .addComponent(jLabel4))
                         .addGap(56, 56, 56)
-                        .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDocumento)
-                            .addGroup(paneCoordinadorLayout.createSequentialGroup()
-                                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(paneRectorLayout.createSequentialGroup()
+                                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txtApellidos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
                                     .addComponent(txtNombres, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
-                    .addGroup(paneCoordinadorLayout.createSequentialGroup()
-                        .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneRectorLayout.createSequentialGroup()
+                        .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel8)
                             .addComponent(jLabel6)
@@ -183,69 +184,69 @@ public class Comite extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(btnguardar))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDireccion)
                             .addComponent(txtTipodesangre)
                             .addComponent(txtTipoDoc)
                             .addComponent(txtTelefono)
-                            .addGroup(paneCoordinadorLayout.createSequentialGroup()
+                            .addGroup(paneRectorLayout.createSequentialGroup()
                                 .addComponent(btnModificar)
                                 .addGap(29, 29, 29)
                                 .addComponent(btnEliminar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnLimpiar))
-                            .addGroup(paneCoordinadorLayout.createSequentialGroup()
+                            .addGroup(paneRectorLayout.createSequentialGroup()
                                 .addComponent(rbMasculinoA)
                                 .addGap(18, 18, 18)
                                 .addComponent(rbFemeninoA)
                                 .addContainerGap(135, Short.MAX_VALUE))))))
         );
-        paneCoordinadorLayout.setVerticalGroup(
-            paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paneCoordinadorLayout.createSequentialGroup()
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(paneCoordinadorLayout.createSequentialGroup()
+        paneRectorLayout.setVerticalGroup(
+            paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneRectorLayout.createSequentialGroup()
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneRectorLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(paneCoordinadorLayout.createSequentialGroup()
+                    .addGroup(paneRectorLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtTipoDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(txtTipodesangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(rbMasculinoA)
                         .addComponent(rbFemeninoA))
                     .addComponent(jLabel13))
                 .addGap(18, 18, 18)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(ckMatriculado)
                 .addGap(18, 18, 18)
-                .addGroup(paneCoordinadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneRectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnguardar)
                     .addComponent(btnModificar)
                     .addComponent(btnEliminar)
@@ -253,7 +254,7 @@ public class Comite extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        tblCoordinadores.setModel(new javax.swing.table.DefaultTableModel(
+        tblRectores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -276,37 +277,36 @@ public class Comite extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tblCoordinadores.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblRectores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblCoordinadoresMouseClicked(evt);
+                tblRectoresMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(tblCoordinadores);
+        jScrollPane1.setViewportView(tblRectores);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(490, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 923, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 486, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 923, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(paneCoordinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(964, Short.MAX_VALUE)))
+                    .addComponent(paneRector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(950, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(paneCoordinador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(paneRector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -352,7 +352,7 @@ public class Comite extends javax.swing.JFrame {
         Boolean Activo = ckMatriculado.isSelected();
         try{
             Connection con = Conexion.getConexion();
-            PreparedStatement ps = con.prepareStatement("INSERT INTO Comite (Nombres,Apellidos,Documento,Tipo_identificacion,Direccion,Tipo_sangre,Sexo,Telefono,Activo) VALUES (?,?,?,?,?,?,?,?,?);");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO Rectores (Nombres,Apellidos,Documento,Tipo_identificacion,Direccion,Tipo_sangre,Sexo,Telefono,Activo) VALUES (?,?,?,?,?,?,?,?,?);");
             ps.setString(1, Nombres);
             ps.setString(2, Apellidos);
             ps.setString(3, Documento);
@@ -363,7 +363,7 @@ public class Comite extends javax.swing.JFrame {
             ps.setString(8, Telefono);
             ps.setBoolean(9, Activo);
             ps.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Orientadores Guardado");
+            JOptionPane.showMessageDialog(null,"Rectores Guardado");
             // CargarTabla();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,e.toString());
@@ -390,7 +390,7 @@ public class Comite extends javax.swing.JFrame {
         Boolean Activo = ckMatriculado.isSelected();
         try{
             Connection con = Conexion.getConexion();
-            PreparedStatement ps = con.prepareStatement("UPDATE Comite SET  Nombres=?,Apellidos=?,Documento=?,Tipo_identificacion=?,Direccion=?,Tipo_sangre=?,Sexo=?,Telefono=?,Activo=? WHERE Id=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE Rectores SET  Nombres=?,Apellidos=?,Documento=?,Tipo_identificacion=?,Direccion=?,Tipo_sangre=?,Sexo=?,Telefono=?,Activo=? WHERE Id=?");
             ps.setString(1, Nombres);
             ps.setString(2, Apellidos);
             ps.setString(3, Documento);
@@ -415,10 +415,10 @@ public class Comite extends javax.swing.JFrame {
 
         try{
             Connection con = Conexion.getConexion();
-            PreparedStatement ps = con.prepareStatement("DELETE FROM Comite WHERE Id=?");
+            PreparedStatement ps = con.prepareStatement("DELETE FROM Rectores WHERE Id=?");
             ps.setInt(1,id);
             ps.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Orientadores Eliminado");
+            JOptionPane.showMessageDialog(null,"Rectores Eliminado");
             CargarTabla();
             Limpiar();
         } catch (SQLException e) {
@@ -430,14 +430,14 @@ public class Comite extends javax.swing.JFrame {
         Limpiar();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
-    private void tblCoordinadoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCoordinadoresMouseClicked
+    private void tblRectoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblRectoresMouseClicked
         try{
-            int fila = tblCoordinadores.getSelectedRow();
-            int id = Integer.parseInt(tblCoordinadores.getValueAt(fila,0).toString());
+            int fila = tblRectores.getSelectedRow();
+            int id = Integer.parseInt(tblRectores.getValueAt(fila,0).toString());
             PreparedStatement ps;
             ResultSet rs;
             Connection con = Conexion.getConexion();
-            ps = con.prepareStatement("SELECT Nombres,Apellidos,Documento,Tipo_identificacion,Direccion,Tipo_sangre,Sexo,Telefono,Activo FROM Comite WHERE Id=?");
+            ps = con.prepareStatement("SELECT Nombres,Apellidos,Documento,Tipo_identificacion,Direccion,Tipo_sangre,Sexo,Telefono,Activo FROM Rectores WHERE Id=?");
             ps.setInt(1, id);
             rs= ps.executeQuery();
             while(rs.next()){
@@ -459,24 +459,22 @@ public class Comite extends javax.swing.JFrame {
         catch(SQLException e ){
             JOptionPane.showMessageDialog(null, e.toString());
         }
-    }//GEN-LAST:event_tblCoordinadoresMouseClicked
+    }//GEN-LAST:event_tblRectoresMouseClicked
 
-    
-    
-     private void CargarTabla() {
-         DefaultTableModel mt = (DefaultTableModel) tblCoordinadores.getModel();
+        private void CargarTabla() {
+         DefaultTableModel mt = (DefaultTableModel) tblRectores.getModel();
         mt.setRowCount(0);
         PreparedStatement ps;
         ResultSet rs;
         ResultSetMetaData rsmd;
         int columnas;
         int [] anchos ={1,1,10,10,8,2,10,2,8,1,5,7,8,8,2,8};
-        for ( int i =0; i <tblCoordinadores.getColumnCount();i++){
-        tblCoordinadores.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+        for ( int i =0; i <tblRectores.getColumnCount();i++){
+        tblRectores.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
         }
         try{
             Connection con = Conexion.getConexion();
-             ps = con.prepareStatement("SELECT Id,Nombres,Apellidos,Documento,Tipo_identificacion,Direccion,Tipo_sangre,Sexo,Telefono,Activo FROM Comite");
+             ps = con.prepareStatement("SELECT Id,Nombres,Apellidos,Documento,Tipo_identificacion,Direccion,Tipo_sangre,Sexo,Telefono,Activo FROM Rectores");
             rs= ps.executeQuery();
             rsmd = rs.getMetaData();
             columnas = rsmd.getColumnCount();
@@ -509,8 +507,6 @@ txtId.setText("");
         
     }
     /**
-     * 
-     * 
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -527,20 +523,20 @@ txtId.setText("");
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Comite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rectores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Comite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rectores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Comite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rectores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Comite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rectores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Comite().setVisible(true);
+                new Rectores().setVisible(true);
             }
         });
     }
@@ -560,10 +556,10 @@ txtId.setText("");
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel paneCoordinador;
+    private javax.swing.JPanel paneRector;
     private javax.swing.JRadioButton rbFemeninoA;
     private javax.swing.JRadioButton rbMasculinoA;
-    private javax.swing.JTable tblCoordinadores;
+    private javax.swing.JTable tblRectores;
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtDocumento;
